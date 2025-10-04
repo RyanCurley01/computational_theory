@@ -22,5 +22,5 @@
     }
   },
   "forwardPorts": [8888],
-  "postCreateCommand": "pip install --upgrade pip && pip install notebook pandas numpy matplotlib seaborn scikit-learn statsmodels sympy nose yfinance qiskit"
+  "postCreateCommand": "pip install --upgrade pip && pip install notebook pandas numpy matplotlib seaborn scikit-learn statsmodels sympy nose2 yfinance qiskit"
 }

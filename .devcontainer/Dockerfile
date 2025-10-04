@@ -21,6 +21,6 @@ RUN pip install --upgrade pip \
                    scikit-learn \
                    statsmodels \
                    sympy \
-                   nose \
+                   nose2 \
                    yfinance \
                    qiskit
