@@ -8,8 +8,19 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     git \
     curl \
+    container-tools \
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and install common Python packages
 RUN pip install --upgrade pip \
-    && pip install notebook pandas numpy matplotlib seaborn scikit-learn jupyterlab
+    && pip install notebook \
+                   pandas \
+                   numpy \
+                   matplotlib \
+                   seaborn \
+                   scikit-learn \
+                   statsmodels \
+                   sympy \
+                   nose \
+                   yfinance \
+                   qiskit
