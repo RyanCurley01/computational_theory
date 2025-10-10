@@ -13,11 +13,12 @@
         "ms-python.isort"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
         "python.formatting.provider": "black",
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": true,
-        "jupyter.askForKernelRestart": false
+        "jupyter.askForKernelRestart": false,
+        "jupyter.kernels.computeAutoDefault": true
       }
     }
   },

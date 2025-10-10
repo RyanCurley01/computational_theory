@@ -20,9 +20,10 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip and install all required Python packages
+# Upgrade pip and install all required Python packages, including ipykernel
 RUN pip install --upgrade pip \
     && pip install \
+        ipykernel \
         notebook \
         pandas \
         numpy \
@@ -35,4 +36,6 @@ RUN pip install --upgrade pip \
         yfinance \
         qiskit \
         IPython \
-        scipy
+        scipy \
+        psutil \
+    && python -m ipykernel install --sys-prefix --name devcontainer --display-name "Python 3.12 (DevContainer)"
