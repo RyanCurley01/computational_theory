@@ -1,26 +1,38 @@
-# Base image with Python 3.12
 FROM mcr.microsoft.com/vscode/devcontainers/python:3.12
 
 # Avoid prompts during package installation
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install system dependencies (if needed)
+# Install system dependencies required for scientific Python packages
 RUN apt-get update && apt-get install -y \
     git \
     curl \
-    container-tools \
+    build-essential \
+    gfortran \
+    libopenblas-dev \
+    liblapack-dev \
+    libatlas-base-dev \
+    libffi-dev \
+    libssl-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    libzmq3-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip and install common Python packages
+# Upgrade pip and install all required Python packages
 RUN pip install --upgrade pip \
-    && pip install notebook \
-                   pandas \
-                   numpy \
-                   matplotlib \
-                   seaborn \
-                   scikit-learn \
-                   statsmodels \
-                   sympy \
-                   nose2 \
-                   yfinance \
-                   qiskit
+    && pip install \
+        notebook \
+        pandas \
+        numpy \
+        matplotlib \
+        seaborn \
+        scikit-learn \
+        statsmodels \
+        sympy \
+        nose2 \
+        yfinance \
+        qiskit \
+        IPython \
+        scipy
