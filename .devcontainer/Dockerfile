@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     gfortran \
     libopenblas-dev \
     liblapack-dev \
-    libatlas-base-dev \
     libffi-dev \
     libssl-dev \
     libxml2-dev \

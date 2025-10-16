@@ -23,4 +23,6 @@
     }
   },
   "forwardPorts": [8888]
+  ,
+  "postCreateCommand": "pip install --upgrade pip && pip install ipykernel notebook pandas numpy matplotlib seaborn scikit-learn statsmodels sympy nose2 yfinance qiskit IPython scipy psutil && python -m ipykernel install --sys-prefix --name devcontainer --display-name 'Python 3.12 (DevContainer)'"
 }
